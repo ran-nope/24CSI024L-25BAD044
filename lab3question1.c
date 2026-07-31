@@ -1,10 +1,10 @@
 #include <stdio.h>
 int main() {
     int n;
+    printf("Enter the number of elements: ");
     scanf("%d", &n);
-
     int a[n];
-
+    printf("Enter %d elements:\n", n);
     for(int i = 0; i < n; i++)
         scanf("%d", &a[i]);
 
@@ -15,11 +15,10 @@ int main() {
             a[j + 1] = a[j];
             j--;
         }
-
         a[j + 1] = key;
     }
 
-    printf("Sorted Array:\n");
+    printf("\nSorted Array:\n");
     for(int i = 0; i < n; i++)
         printf("%d ", a[i]);
 
